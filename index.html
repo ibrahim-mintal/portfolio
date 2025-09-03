@@ -20,6 +20,7 @@
     <ul class="nav-menu" role="menubar">
       <li role="none"><a href="#about" class="nav-link link-underline" role="menuitem" tabindex="0">About</a></li>
       <li role="none"><a href="#skills" class="nav-link link-underline" role="menuitem" tabindex="0">Skills</a></li>
+      <li role="none"><a href="#tools" class="nav-link link-underline" role="menuitem" tabindex="0">Tools</a></li>
       <li role="none"><a href="#work-experience" class="nav-link link-underline" role="menuitem" tabindex="0">Experience</a></li>
       <li role="none"><a href="#projects" class="nav-link link-underline" role="menuitem" tabindex="0">Projects</a></li>
       <li role="none"><a href="#contact" class="nav-link link-underline" role="menuitem" tabindex="0">Contact</a></li>
@@ -55,6 +56,23 @@
       <img src="profile.png" alt="Picture of Ibrahim Ahmed Mintal" width="300" height="300" loading="lazy" />
     </div>
   </header>
+
+  <!-- Tools Section -->
+  <section id="tools" class="tools-section">
+    <div class="tools-logos">
+      <a href="#" class="tool-logo linux" title="Linux" aria-label="Linux"><i class="fab fa-linux"></i></a>
+      <a href="#" class="tool-logo windows" title="Windows" aria-label="Windows"><i class="fab fa-windows"></i></a>
+      <a href="#" class="tool-logo docker" title="Docker" aria-label="Docker"><i class="fab fa-docker"></i></a>
+      <a href="#" class="tool-logo git" title="Git" aria-label="Git"><i class="fab fa-git-alt"></i></a>
+      <a href="#" class="tool-logo ansible" title="Ansible" aria-label="Ansible"><i class="fas fa-tools"></i></a>
+      <a href="#" class="tool-logo jenkins" title="Jenkins" aria-label="Jenkins"><i class="fab fa-jenkins"></i></a>
+      <a href="#" class="tool-logo prometheus" title="Prometheus" aria-label="Prometheus"><i class="fas fa-chart-line"></i></a>
+      <a href="#" class="tool-logo aws" title="AWS" aria-label="AWS"><i class="fab fa-aws"></i></a>
+      <a href="#" class="tool-logo azure" title="Azure" aria-label="Azure"><i class="fab fa-microsoft"></i></a>
+      <a href="#" class="tool-logo terraform" title="Terraform" aria-label="Terraform"><i class="fas fa-cubes"></i></a>
+      <a href="#" class="tool-logo python" title="Python" aria-label="Python"><i class="fab fa-python"></i></a>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="container">
@@ -510,6 +528,7 @@
       <nav aria-label="Footer navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#tools">Tools</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -584,7 +603,7 @@
     }, observerOptions);
 
     // Observe all containers for animation
-    document.querySelectorAll('.container, .certifications-section, .languages-section').forEach(el => {
+    document.querySelectorAll('.container, .certifications-section, .languages-section, .tools-section').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

@@ -360,6 +360,59 @@ nav {
   box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
 
+/* Tools Section */
+.tools-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: var(--section-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.tools-section:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.tools-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-xl);
+}
+
+.tool-logo {
+  font-size: 3rem;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.tool-logo:hover {
+  color: var(--secondary);
+  transform: scale(1.1);
+}
+
+/* Specific colors for each tool logo */
+.tool-logo.linux { color: #fcc624; }
+.tool-logo.windows { color: #0078d4; }
+.tool-logo.docker { color: #2496ed; }
+.tool-logo.git { color: #f05032; }
+.tool-logo.ansible { color: #ee0000; }
+.tool-logo.jenkins { color: #d24939; }
+.tool-logo.prometheus { color: #e6522c; }
+.tool-logo.aws { color: #ff9900; }
+.tool-logo.azure { color: #0078d4; }
+.tool-logo.terraform { color: #623ce4; }
+.tool-logo.python { color: #3776ab; }
+
+
+
 /* Cards */
 .card {
   background: var(--section-bg);
@@ -726,6 +779,27 @@ footer nav a:hover {
     align-items: flex-start;
     gap: var(--spacing-xs);
   }
+
+  .tools-logos {
+    width: 300px;
+    height: 300px;
+  }
+
+  .tool-logo {
+    font-size: 2.5rem;
+  }
+
+  .tools-logos .tool-logo:nth-child(1) { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  .tools-logos .tool-logo:nth-child(2) { transform: rotate(32.727deg) translateX(120px) rotate(-32.727deg); }
+  .tools-logos .tool-logo:nth-child(3) { transform: rotate(65.455deg) translateX(120px) rotate(-65.455deg); }
+  .tools-logos .tool-logo:nth-child(4) { transform: rotate(98.182deg) translateX(120px) rotate(-98.182deg); }
+  .tools-logos .tool-logo:nth-child(5) { transform: rotate(130.909deg) translateX(120px) rotate(-130.909deg); }
+  .tools-logos .tool-logo:nth-child(6) { transform: rotate(163.636deg) translateX(120px) rotate(-163.636deg); }
+  .tools-logos .tool-logo:nth-child(7) { transform: rotate(196.364deg) translateX(120px) rotate(-196.364deg); }
+  .tools-logos .tool-logo:nth-child(8) { transform: rotate(229.091deg) translateX(120px) rotate(-229.091deg); }
+  .tools-logos .tool-logo:nth-child(9) { transform: rotate(261.818deg) translateX(120px) rotate(-261.818deg); }
+  .tools-logos .tool-logo:nth-child(10) { transform: rotate(294.545deg) translateX(120px) rotate(-294.545deg); }
+  .tools-logos .tool-logo:nth-child(11) { transform: rotate(327.273deg) translateX(120px) rotate(-327.273deg); }
 }
 
 @media (max-width: 480px) {
@@ -742,6 +816,27 @@ footer nav a:hover {
   .contact-form button {
     align-self: stretch;
   }
+
+  .tools-logos {
+    width: 250px;
+    height: 250px;
+  }
+
+  .tool-logo {
+    font-size: 2rem;
+  }
+
+  .tools-logos .tool-logo:nth-child(1) { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  .tools-logos .tool-logo:nth-child(2) { transform: rotate(32.727deg) translateX(100px) rotate(-32.727deg); }
+  .tools-logos .tool-logo:nth-child(3) { transform: rotate(65.455deg) translateX(100px) rotate(-65.455deg); }
+  .tools-logos .tool-logo:nth-child(4) { transform: rotate(98.182deg) translateX(100px) rotate(-98.182deg); }
+  .tools-logos .tool-logo:nth-child(5) { transform: rotate(130.909deg) translateX(100px) rotate(-130.909deg); }
+  .tools-logos .tool-logo:nth-child(6) { transform: rotate(163.636deg) translateX(100px) rotate(-163.636deg); }
+  .tools-logos .tool-logo:nth-child(7) { transform: rotate(196.364deg) translateX(100px) rotate(-196.364deg); }
+  .tools-logos .tool-logo:nth-child(8) { transform: rotate(229.091deg) translateX(100px) rotate(-229.091deg); }
+  .tools-logos .tool-logo:nth-child(9) { transform: rotate(261.818deg) translateX(100px) rotate(-261.818deg); }
+  .tools-logos .tool-logo:nth-child(10) { transform: rotate(294.545deg) translateX(100px) rotate(-294.545deg); }
+  .tools-logos .tool-logo:nth-child(11) { transform: rotate(327.273deg) translateX(100px) rotate(-327.273deg); }
 }
 
 /* Accessibility */
