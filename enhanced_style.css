@@ -371,6 +371,18 @@ nav {
   margin-bottom: var(--spacing-xl);
   text-align: center;
   transition: box-shadow 0.3s ease;
+  width: 100%;
+  display: block;
+}
+
+.tools-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-xl);
+  width: 100%;
 }
 
 .tools-section:hover {
