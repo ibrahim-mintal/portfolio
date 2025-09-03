@@ -17,14 +17,24 @@
 <body>
   <!-- Navigation -->
   <nav role="navigation" aria-label="Main Navigation">
-    <ul class="nav-menu" role="menubar">
-      <li role="none"><a href="#about" class="nav-link link-underline" role="menuitem" tabindex="0">About</a></li>
-      <li role="none"><a href="#skills" class="nav-link link-underline" role="menuitem" tabindex="0">Skills</a></li>
-      <li role="none"><a href="#tools" class="nav-link link-underline" role="menuitem" tabindex="0">Tools</a></li>
-      <li role="none"><a href="#work-experience" class="nav-link link-underline" role="menuitem" tabindex="0">Experience</a></li>
-      <li role="none"><a href="#projects" class="nav-link link-underline" role="menuitem" tabindex="0">Projects</a></li>
-      <li role="none"><a href="#contact" class="nav-link link-underline" role="menuitem" tabindex="0">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="#home" class="brand-link">Ibrahim Mintal</a>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="#about" class="nav-link link-underline" role="menuitem" tabindex="0">About</a></li>
+        <li role="none"><a href="#skills" class="nav-link link-underline" role="menuitem" tabindex="0">Skills</a></li>
+        <li role="none"><a href="#tools" class="nav-link link-underline" role="menuitem" tabindex="0">Tools</a></li>
+        <li role="none"><a href="#work-experience" class="nav-link link-underline" role="menuitem" tabindex="0">Experience</a></li>
+        <li role="none"><a href="#projects" class="nav-link link-underline" role="menuitem" tabindex="0">Projects</a></li>
+        <li role="none"><a href="#contact" class="nav-link link-underline" role="menuitem" tabindex="0">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Hero Section -->
@@ -542,6 +552,7 @@
   </footer>
 
   <!-- JavaScript -->
+  <script src="enhanced_script.js"></script>
   <script>
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
