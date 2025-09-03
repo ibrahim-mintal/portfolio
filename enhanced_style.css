@@ -414,6 +414,7 @@ nav {
 .tool-logo.linux { color: #fcc624; }
 .tool-logo.windows { color: #0078d4; }
 .tool-logo.docker { color: #2496ed; }
+.tool-logo.kubernetes { color: #326CE5; }
 .tool-logo.git { color: #f05032; }
 .tool-logo.ansible { color: #ee0000; }
 .tool-logo.jenkins { color: #d24939; }
