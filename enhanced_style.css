@@ -52,6 +52,15 @@ body.dark-theme {
   --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
+/* Dark Theme Navigation */
+body.dark-theme nav {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+body.dark-theme .nav-menu {
+  background: rgba(0, 0, 0, 0.98);
+}
+
 /* Reset and Base Styles */
 *,
 *::before,
