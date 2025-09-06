@@ -41,3 +41,69 @@ if (themeToggle) {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 }
+
+// Project modal functionality
+const projectModal = document.getElementById('project-modal');
+const modalTitle = document.getElementById('modal-title');
+const modalImages = document.getElementById('modal-images');
+const modalClose = document.querySelector('.modal-close');
+
+// Project to images mapping
+const projectImages = {
+  'AWS Terraform Infrastructure Deployment': ['AWS Terraform Infrastructure Deployment.png'],
+  'Scalable Web Application Architecture on AWS with ALB and Auto Scaling': [
+    'Scalable Web Application Architecture on AWS with ALB and Auto Scaling.svg'
+  ],
+  'Automated NodeJS Application Deployment': ['Automated NodeJS Application Deployment.png'],
+  'Dockerizing a Flask Application and Pushing to Docker Hub': [
+    'Dockerizing a Flask Application and Pushing to Docker Hub.png',
+    'Dockerizing a Flask Application and Pushing to Docker Hub (2).png'
+  ],
+  'Automated WordPress Deployment with Ansible and Docker': ['WordPress Deployment with Ansible and Docker.png']
+};
+
+// Function to open project modal (called from HTML onclick)
+function openProjectModal(title) {
+  const images = projectImages[title];
+
+  if (images) {
+    modalTitle.textContent = title;
+    modalImages.innerHTML = '';
+
+    images.forEach(image => {
+      const img = document.createElement('img');
+      img.src = `src/${image}`;
+      img.alt = `${title} - ${image}`;
+      img.loading = 'lazy';
+      modalImages.appendChild(img);
+    });
+
+    projectModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+// Close modal functionality
+if (modalClose) {
+  modalClose.addEventListener('click', closeModal);
+}
+
+if (projectModal) {
+  projectModal.addEventListener('click', (e) => {
+    if (e.target === projectModal) {
+      closeModal();
+    }
+  });
+}
+
+function closeModal() {
+  projectModal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && projectModal.style.display === 'flex') {
+    closeModal();
+  }
+});
