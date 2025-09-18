@@ -1608,7 +1608,7 @@ select:focus-visible {
 
   /* Hero Section */
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     padding: var(--spacing-lg) var(--spacing-md);
   }
