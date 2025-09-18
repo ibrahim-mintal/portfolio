@@ -50,6 +50,33 @@ if (nav) {
   });
 }
 
+// Mobile menu toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+if (mobileMenuToggle && navMenu) {
+  mobileMenuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    mobileMenuToggle.classList.toggle('active');
+  });
+}
+
+// Close mobile menu when clicking outside or on a link
+document.addEventListener('click', (e) => {
+  if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+    navMenu.classList.remove('active');
+    mobileMenuToggle.classList.remove('active');
+  }
+});
+
+// Close mobile menu when a link is clicked
+navMenu.addEventListener('click', (e) => {
+  if (e.target.tagName === 'A') {
+    navMenu.classList.remove('active');
+    mobileMenuToggle.classList.remove('active');
+  }
+});
+
 // Add counters to project cards
 const projectCards = document.querySelectorAll('.project-card');
 if (projectCards.length > 0) {
