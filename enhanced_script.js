@@ -1,109 +1,60 @@
-const menuToggle = document.querySelector('.mobile-menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+const scrollToTopBtn = document.getElementById('scroll-to-hero');
 
-// Load saved theme from localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  body.classList.add('dark-theme');
-}
-
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
+if (scrollToTopBtn) {
+  scrollToTopBtn.addEventListener('click', function() {
+    const heroSection = document.getElementById('home');
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: 'smooth' });
+    }
   });
-}
 
-// Close menu when clicking a nav link (for better UX on mobile)
-if (navMenu) {
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navMenu.classList.contains('active')) {
-        if (menuToggle) {
-          menuToggle.setAttribute('aria-expanded', false);
-          menuToggle.classList.remove('active');
-        }
-        navMenu.classList.remove('active');
-      }
-    });
+  // Show/hide scroll-to-top button based on scroll position
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // Show button after scrolling 300px
+      scrollToTopBtn.classList.add('is-visible');
+    } else {
+      scrollToTopBtn.classList.remove('is-visible');
+    }
   });
-}
+  }
 
-// Theme toggle functionality
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-    const isDark = body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+// Dark mode toggle
+const themeToggleBtn = document.getElementById('theme-toggle');
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    // Optionally save preference to localStorage
+    if (document.body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
   });
-}
 
-// Project modal functionality
-const projectModal = document.getElementById('project-modal');
-const modalTitle = document.getElementById('modal-title');
-const modalImages = document.getElementById('modal-images');
-const modalClose = document.querySelector('.modal-close');
-
-// Project to images mapping
-const projectImages = {
-  'AWS Terraform Infrastructure Deployment': ['AWS Terraform Infrastructure Deployment.png'],
-  'Scalable Web Application Architecture on AWS with ALB and Auto Scaling': [
-    'Scalable Web Application Architecture on AWS with ALB and Auto Scaling.svg'
-  ],
-  'Automated NodeJS Application Deployment': ['Automated NodeJS Application Deployment.png'],
-  'Dockerizing a Flask Application and Pushing to Docker Hub': [
-    'Dockerizing a Flask Application and Pushing to Docker Hub.png',
-    'Dockerizing a Flask Application and Pushing to Docker Hub (2).png'
-  ],
-  'Automated WordPress Deployment with Ansible and Docker': ['WordPress Deployment with Ansible and Docker.png']
-};
-
-// Function to open project modal (called from HTML onclick)
-function openProjectModal(title) {
-  const images = projectImages[title];
-
-  if (images) {
-    modalTitle.textContent = title;
-    modalImages.innerHTML = '';
-
-    images.forEach(image => {
-      const img = document.createElement('img');
-      img.src = `src/${image}`;
-      img.alt = `${title} - ${image}`;
-      img.loading = 'lazy';
-      modalImages.appendChild(img);
-    });
-
-    projectModal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+  // On page load, apply saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-theme');
   }
 }
 
-// Close modal functionality
-if (modalClose) {
-  modalClose.addEventListener('click', closeModal);
-}
-
-if (projectModal) {
-  projectModal.addEventListener('click', (e) => {
-    if (e.target === projectModal) {
-      closeModal();
+// Navigation bar scroll effect
+const nav = document.querySelector('nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // Add class after scrolling 50px
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
     }
   });
 }
 
-function closeModal() {
-  projectModal.style.display = 'none';
-  document.body.style.overflow = '';
+// Add counters to project cards
+const projectCards = document.querySelectorAll('.project-card');
+if (projectCards.length > 0) {
+  projectCards.forEach((card, index) => {
+    const counterElement = card.querySelector('.project-counter-card');
+    if (counterElement) counterElement.textContent = `${index + 1} / ${projectCards.length}`;
+  });
 }
-
-// Close modal on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && projectModal.style.display === 'flex') {
-    closeModal();
-  }
-});

@@ -1,0 +1,2 @@
+- [x] Change icon in index.html from fa-arrow-right to fa-arrow-up
+- [x] Update CSS hover transform from translateX(4px) to translateY(-4px)

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -75,22 +75,25 @@
   </header>
 
   <!-- Tools Section -->
-  <section id="tools" class="tools-section">
-    <div class="tools-logos">
-      <a href="#" class="tool-logo linux" title="Linux" aria-label="Linux"><i class="fab fa-linux"></i></a>
-      <a href="#" class="tool-logo windows" title="Windows" aria-label="Windows"><i class="fab fa-windows"></i></a>
-      <a href="#" class="tool-logo docker" title="Docker" aria-label="Docker"><i class="fab fa-docker"></i></a>
-<a href="#" class="tool-logo kubernetes" title="Kubernetes" aria-label="Kubernetes" style="display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem;">
-  <img src="logo.svg" alt="Kubernetes logo" width="48" height="48" aria-hidden="true" focusable="false">
-</a>
-      <a href="#" class="tool-logo git" title="Git" aria-label="Git"><i class="fab fa-git-alt"></i></a>
-      <a href="#" class="tool-logo ansible" title="Ansible" aria-label="Ansible"><i class="fas fa-tools"></i></a>
-      <a href="#" class="tool-logo jenkins" title="Jenkins" aria-label="Jenkins"><i class="fab fa-jenkins"></i></a>
-      <a href="#" class="tool-logo prometheus" title="Prometheus" aria-label="Prometheus"><i class="fas fa-chart-line"></i></a>
-      <a href="#" class="tool-logo aws" title="AWS" aria-label="AWS"><i class="fab fa-aws"></i></a>
-      <a href="#" class="tool-logo azure" title="Azure" aria-label="Azure"><i class="fab fa-microsoft"></i></a>
-      <a href="#" class="tool-logo terraform" title="Terraform" aria-label="Terraform"><i class="fas fa-cubes"></i></a>
-      <a href="#" class="tool-logo python" title="Python" aria-label="Python"><i class="fab fa-python"></i></a>
+  <section class="tools-section">
+    <div id="tools" class="tools-marquee">
+      <div class="tools-logos">
+        <a href="#" class="tool-logo linux" title="Linux" aria-label="Linux"><i class="fab fa-linux"></i></a>
+        <a href="#" class="tool-logo windows" title="Windows" aria-label="Windows"><i class="fab fa-windows"></i></a>
+        <a href="#" class="tool-logo docker" title="Docker" aria-label="Docker"><i class="fab fa-docker"></i></a>
+        <a href="#" class="tool-logo kubernetes" title="Kubernetes" aria-label="Kubernetes" style="display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem;">
+          <img src="logo.svg" alt="Kubernetes logo" width="48" height="48" aria-hidden="true" focusable="false">
+        </a>
+        <a href="#" class="tool-logo git" title="Git" aria-label="Git"><i class="fab fa-git-alt"></i></a>
+        <a href="#" class="tool-logo ansible" title="Ansible" aria-label="Ansible"><i class="fas fa-tools"></i></a>
+        <a href="#" class="tool-logo jenkins" title="Jenkins" aria-label="Jenkins"><i class="fab fa-jenkins"></i></a>
+        <a href="#" class="tool-logo github-actions" title="GitHub Actions" aria-label="GitHub Actions"><i class="fab fa-github"></i></a>
+        <a href="#" class="tool-logo prometheus" title="Prometheus" aria-label="Prometheus"><i class="fas fa-chart-line"></i></a>
+        <a href="#" class="tool-logo aws" title="AWS" aria-label="AWS"><i class="fab fa-aws"></i></a>
+        <a href="#" class="tool-logo azure" title="Azure" aria-label="Azure"><i class="fab fa-microsoft"></i></a>
+        <a href="#" class="tool-logo terraform" title="Terraform" aria-label="Terraform"><i class="fas fa-cubes"></i></a>
+        <a href="#" class="tool-logo python" title="Python" aria-label="Python"><i class="fab fa-python"></i></a>
+      </div>
     </div>
   </section>
 
@@ -110,6 +113,7 @@
       This ongoing growth has empowered me to deliver robust, scalable, and secure systems that significantly improve efficiency and business impact.
     </p>
   </section>
+
 
   <!-- Skills Section -->
   <section id="skills" class="container" tabindex="-1">
@@ -133,6 +137,7 @@
         <h3><i class="fas fa-tools"></i> CI/CD</h3>
         <div class="skills-list">
           <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">GitHub Actions</span>
         </div>
       </div>
       <div class="skill-category" role="listitem">
@@ -204,22 +209,12 @@
   <section id="certifications" class="certifications-section" tabindex="-1">
     <h2 class="section-title">Certifications</h2>
     <div class="certifications-list">
-      <div class="certification-item">
-        <div class="certification-title">
-          <a href="https://www.credly.com/badges/dc1e938e-06f4-41b3-94c6-9427e0aed58c/public_url" target="_blank" rel="noopener" class="link-underline">
-            <i class="fab fa-aws"></i> AWS Certified Solutions Architect - Associate
-          </a>
-        </div>
-        <div class="certification-date">July 2025</div>
-      </div>
-      <div class="certification-item">
-        <div class="certification-title">
-          <a href="https://www.credly.com/badges/41064fd4-cc1b-43ce-ab99-64fdfae2b261/public_url" target="_blank" rel="noopener" class="link-underline">
-            <i class="fab fa-aws"></i> AWS Certified Cloud Practitioner
-          </a>
-        </div>
-        <div class="certification-date">March 2025</div>
-      </div>
+      <a href="https://www.credly.com/badges/dc1e938e-06f4-41b3-94c6-9427e0aed58c/public_url" target="_blank" rel="noopener" class="certification-badge-link">
+        <img src="src/aws-certified-solutions-architect-associate.png" alt="AWS Certified Solutions Architect - Associate Badge" class="certification-badge">
+      </a>
+      <a href="https://www.credly.com/badges/41064fd4-cc1b-43ce-ab99-64fdfae2b261/public_url" target="_blank" rel="noopener" class="certification-badge-link">
+        <img src="src/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner Badge" class="certification-badge">
+      </a>
     </div>
   </section>
 
@@ -263,35 +258,35 @@
     </article>
   </section>
 
-  <!-- Education Section -->
-  <section id="education" class="container" tabindex="-1">
-    <h2 class="section-title">Education</h2>
-    <article class="card">
-      <h3><i class="fas fa-certificate"></i> Digital Egypt Pioneers Initiative (DEPI) – DevOps Scholarship</h3>
-      <p><strong>DevOps Engineer Track</strong><br />
-      June 2025 – Dec 2025</p>
-      <ul>
-        <li>Completed a competitive 6-month DevOps Engineer track covering software development, automation, cloud computing, and infrastructure as code.</li>
-        <li>Gained hands-on experience in CI/CD (Jenkins, Git), configuration management (Ansible), containerization (Docker, Kubernetes), and infrastructure as code (Terraform).</li>
-        <li>Built and deployed real-world projects, including a capstone project integrating cloud, monitoring (Prometheus), and automation tools.</li>
-        <li>Strengthened skills in web server configuration, application deployment, and troubleshooting to optimize software delivery pipelines.</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h3><i class="fas fa-graduation-cap"></i> BSc. in Electrical Engineering</h3>
-      <p><strong>Communications and Electronics</strong><br />
-      Alexandria University, Faculty of Engineering (2009 – 2014)<br />
-      <em>Grade: Very Good</em></p>
-      <h4>Graduation Project</h4>
-      <p>Quadcopter with real-time surveillance IP camera performing object tracking and face recognition using OpenCV in C/C++ (<strong>Excellent</strong>)</p>
-    </article>
-  </section>
-
   <!-- Projects Section -->
   <section id="projects" class="container" tabindex="-1">
     <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
       <article class="project-card">
+        <div class="project-counter-card"></div>
+        <div class="project-header">
+          <h3 class="project-title">
+            <i class="fas fa-robot"></i> Automated CI/CD Pipeline for a Multi-Container App (Movie Review)
+          </h3>
+          <img src="src/server1-frontend.png" alt="Project thumbnail" class="project-thumbnail" onclick="openProjectModal('Automated CI/CD Pipeline for a Multi-Container App - Movie Review')">
+        </div>
+        <p class="project-description">
+          This project demonstrates how to build and deploy a microservices-style web application using modern DevOps tools. The app consists of a frontend, backend, and database, all containerized with Docker, deployed with Ansible, and automated through Jenkins CI/CD pipelines.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Jenkins</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">CI/CD</span>
+          <span class="tech-tag">Ansible</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/ibrahim-mintal/Jenkins-pipeline-3-teir-Web-App" target="_blank" rel="noopener" class="link-underline">
+            GitHub Repo
+          </a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-counter-card"></div>
         <div class="project-header">
           <h3 class="project-title">
             <i class="fab fa-aws"></i> AWS Terraform Infrastructure Deployment
@@ -313,8 +308,8 @@
           </a>
         </div>
       </article>
-
       <article class="project-card">
+        <div class="project-counter-card"></div>
         <div class="project-header">
           <h3 class="project-title">
             <i class="fas fa-cloud"></i> Scalable Web Application Architecture on AWS with ALB and Auto Scaling
@@ -336,8 +331,8 @@
           </a>
         </div>
       </article>
-
       <article class="project-card">
+        <div class="project-counter-card"></div>
         <div class="project-header">
           <h3 class="project-title">
             <i class="fas fa-robot"></i> Automated NodeJS Application Deployment
@@ -359,8 +354,8 @@
           </a>
         </div>
       </article>
-
       <article class="project-card">
+        <div class="project-counter-card"></div>
         <div class="project-header">
           <h3 class="project-title">
             <i class="fab fa-docker"></i> Dockerizing a Flask Application and Pushing to Docker Hub
@@ -383,8 +378,8 @@
           </a>
         </div>
       </article>
-
       <article class="project-card">
+        <div class="project-counter-card"></div>
         <div class="project-header">
           <h3 class="project-title">
             <i class="fab fa-wordpress"></i> Automated WordPress Deployment with Ansible and Docker
@@ -412,6 +407,31 @@
     </div>
   </section>
 
+  <!-- Education Section -->
+  <section id="education" class="container" tabindex="-1">
+    <h2 class="section-title">Education</h2>
+    <article class="card">
+      <h3><i class="fas fa-certificate"></i> Digital Egypt Pioneers Initiative (DEPI) – DevOps Scholarship</h3>
+      <p><strong>DevOps Engineer Track</strong><br />
+      June 2025 – Dec 2025</p>
+      <ul>
+        <li>Completed a competitive 6-month DevOps Engineer track covering software development, automation, cloud computing, and infrastructure as code.</li>
+        <li>Gained hands-on experience in CI/CD (Jenkins, Git), configuration management (Ansible), containerization (Docker, Kubernetes), and infrastructure as code (Terraform).</li>
+        <li>Built and deployed real-world projects, including a capstone project integrating cloud, monitoring (Prometheus), and automation tools.</li>
+        <li>Strengthened skills in web server configuration, application deployment, and troubleshooting to optimize software delivery pipelines.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3><i class="fas fa-graduation-cap"></i> BSc. in Electrical Engineering</h3>
+      <p><strong>Communications and Electronics</strong><br />
+      Alexandria University, Faculty of Engineering (2009 – 2014)<br />
+      <em>Grade: Very Good</em></p>
+      <h4>Graduation Project</h4>
+      <p>Quadcopter with real-time surveillance IP camera performing object tracking and face recognition using OpenCV in C/C++ (<strong>Excellent</strong>)</p>
+    </article>
+  </section>
+
   <!-- Languages Section -->
   <section id="languages" class="languages-section" tabindex="-1">
     <h2 class="section-title">Languages</h2>
@@ -429,135 +449,135 @@
 
   <!-- Contact Section -->
   <section id="contact" class="container contact-section" tabindex="-1">
-    <div class="call-to-act">
-      <h3>
-        <i class="fas fa-handshake"></i>
-        Ready to Build Something Amazing Together?
-      </h3>
-      <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: flex-start; justify-content: center;">
-        <div class="container-contact-form" style="flex: 1 1 400px; min-width: 300px;">
-          <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1.1rem;">
-            I'm ready to hear about your project. Let's discuss how we can work together to create impactful solutions.
-          </p>
-          
-          <form class="contact-form" action="mailto:ibrahim.mintal@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
-            <div>
-              <label for="project-type">What type of project do you need completed?</label>
-              <select id="project-type" name="Project Type" required>
-                <option value="">Select Project Type</option>
-                <option value="Cloud Infrastructure">Cloud Infrastructure</option>
-                <option value="DevOps Automation">DevOps Automation</option>
-                <option value="CI/CD Pipeline">CI/CD Pipeline</option>
-                <option value="System Administration">System Administration</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
+    <div class="card contact-card">
+      <div class="call-to-act">
+        <h3>
+          <i class="fas fa-handshake"></i>
+          Ready to Build Something Amazing Together?
+        </h3>
+        <div class="contact-container">
+          <div class="container-contact-form">
+            <p>
+              I'm ready to hear about your project. Let's discuss how we can work together to create impactful solutions.
+            </p>
 
-            <div>
-              <label>Which services do you need?</label>
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
-                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                  <input type="radio" name="Services" value="Development" checked /> Development
-                </label>
-                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                  <input type="radio" name="Services" value="Consulting" /> Consulting
-                </label>
-                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                  <input type="radio" name="Services" value="Automation" /> Automation
-                </label>
-                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                  <input type="radio" name="Services" value="Other" /> Other
-                </label>
+            <form class="contact-form" onsubmit="return false">
+              <div>
+                <label for="project-type">What type of project do you need completed?</label>
+                <select id="project-type" name="Project Type" required>
+                  <option value="">Select Project Type</option>
+                  <option value="Cloud Infrastructure">Cloud Infrastructure</option>
+                  <option value="DevOps Automation">DevOps Automation</option>
+                  <option value="CI/CD Pipeline">CI/CD Pipeline</option>
+                  <option value="System Administration">System Administration</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
-            </div>
 
-            <div>
-              <label for="project-budget">What's the budget for your project?</label>
-              <select id="project-budget" name="Budget" required>
-                <option value="">Select Budget</option>
-                <option value="Less than 200 $">Less than 200 $</option>
-                <option value="200 $ - 500 $">200 $ - 500 $</option>
-                <option value="500$ - 1000$">500$ - 1000$</option>
-              </select>
-            </div>
+              <div>
+                <label>Which services do you need?</label>
+                <div class="services-options">
+                  <label>
+                    <input type="radio" name="Services" value="Development" checked /> Development
+                  </label>
+                  <label>
+                    <input type="radio" name="Services" value="Consulting" /> Consulting
+                  </label>
+                  <label>
+                    <input type="radio" name="Services" value="Automation" /> Automation
+                  </label>
+                  <label>
+                    <input type="radio" name="Services" value="Other" /> Other
+                  </label>
+                </div>
+              </div>
 
-            <div>
-              <label for="project-timeframe">When do you need this project completed?</label>
-              <select id="project-timeframe" name="Timeframe" required>
-                <option value="">Select Completion Time</option>
-                <option value="Less than 1 week">Less than 1 week</option>
-                <option value="1-2 weeks">1-2 weeks</option>
-                <option value="2-4 weeks">2-4 weeks</option>
-              </select>
-            </div>
+              <div>
+                <label for="project-budget">What's the budget for your project?</label>
+                <select id="project-budget" name="Budget" required>
+                  <option value="">Select Budget</option>
+                  <option value="Less than 200 $">Less than 200 $</option>
+                  <option value="200 $ - 500 $">200 $ - 500 $</option>
+                  <option value="500$ - 1000$">500$ - 1000$</option>
+                </select>
+              </div>
 
-            <div>
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="Name" placeholder="Your full name" required />
-            </div>
+              <div>
+                <label for="project-timeframe">When do you need this project completed?</label>
+                <select id="project-timeframe" name="Timeframe" required>
+                  <option value="">Select Completion Time</option>
+                  <option value="Less than 1 week">Less than 1 week</option>
+                  <option value="1-2 weeks">1-2 weeks</option>
+                  <option value="2-4 weeks">2-4 weeks</option>
+                </select>
+              </div>
 
-            <div>
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="Email" placeholder="Your email address" required />
-            </div>
+              <div>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="Name" placeholder="Your full name" required />
+              </div>
 
-            <div>
-              <label for="message">Your Message</label>
-              <textarea id="message" name="Message" rows="5" placeholder="Tell me more about your project..." required></textarea>
-            </div>
+              <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" placeholder="Your email address" required />
+              </div>
 
-            <button type="submit" class="btn btn-primary">
-              <i class="fas fa-paper-plane"></i>
-              Send Message
-            </button>
-          </form>
-        </div>
-        
-        <div class="container-contact-info" style="flex: 1 1 300px; min-width: 250px;">
-          <div style="background: var(--section-bg); padding: var(--spacing-xl); border-radius: var(--radius-md); border: 1px solid var(--border);">
-            <h4 style="color: var(--primary); margin-bottom: var(--spacing-lg);">
-              <i class="fas fa-address-card"></i> Contact Information
-            </h4>
-            
-            <div style="margin-bottom: var(--spacing-lg);">
-              <h5 style="color: var(--secondary); margin-bottom: var(--spacing-xs);">
-                <i class="fas fa-envelope"></i> Email
-              </h5>
-              <a href="mailto:ibrahim.mintal@gmail.com" style="color: var(--text-light);">
-                ibrahim.mintal@gmail.com
-              </a>
-            </div>
-            
-            <div style="margin-bottom: var(--spacing-lg);">
-              <h5 style="color: var(--secondary); margin-bottom: var(--spacing-xs);">
-                <i class="fas fa-phone"></i> Phone
-              </h5>
-              <p style="color: var(--text-light); margin: 0;">
-                +201555404789<br>
-                +201062972449
-              </p>
-            </div>
-            
-            <div style="margin-bottom: var(--spacing-lg);">
-              <h5 style="color: var(--secondary); margin-bottom: var(--spacing-xs);">
-                <i class="fas fa-map-marker-alt"></i> Location
-              </h5>
-              <p style="color: var(--text-light); margin: 0;">Alexandria, Egypt</p>
-            </div>
-            
-            <div>
-              <h5 style="color: var(--secondary); margin-bottom: var(--spacing-md);">
-                <i class="fas fa-share-alt"></i> Connect
-              </h5>
-              <div style="display: flex; gap: var(--spacing-md);">
-                <a href="https://github.com/ibrahim-mintal" target="_blank" rel="noopener" aria-label="GitHub" 
-                   style="color: var(--text-muted); font-size: 1.5rem; transition: all 0.3s ease;">
-                  <i class="fab fa-github"></i>
+              <div>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="Message" rows="5" placeholder="Tell me more about your project..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="container-contact-info">
+            <div class="contact-info-card">
+              <h4>
+                <i class="fas fa-address-card"></i> Contact Information
+              </h4>
+
+              <div>
+                <h5>
+                  <i class="fas fa-envelope"></i> Email
+                </h5>
+                <a href="mailto:ibrahim.mintal@gmail.com">
+                  ibrahim.mintal@gmail.com
                 </a>
-                <a href="https://www.linkedin.com/in/ibrahim-mintal" target="_blank" rel="noopener" aria-label="LinkedIn"
-                   style="color: var(--text-muted); font-size: 1.5rem; transition: all 0.3s ease;">
-                  <i class="fab fa-linkedin"></i>
-                </a>
+              </div>
+
+              <div>
+                <h5>
+                  <i class="fas fa-phone"></i> Phone
+                </h5>
+                <p>
+                  +201555404789<br>
+                  +201062972449
+                </p>
+              </div>
+
+              <div>
+                <h5>
+                  <i class="fas fa-map-marker-alt"></i> Location
+                </h5>
+                <p>Alexandria, Egypt</p>
+              </div>
+
+              <div>
+                <h5>
+                  <i class="fas fa-share-alt"></i> Connect
+                </h5>
+                <div class="social-links">
+                  <a href="https://github.com/ibrahim-mintal" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/ibrahim-mintal" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -567,29 +587,33 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-  <div class="footer-content">
-    <a href="#home" class="footer-logo">Ibrahim Ahmed Mintal</a>
-      <div class="social-icons">
-        <a href="https://github.com/ibrahim-mintal" target="_blank" rel="noopener" aria-label="GitHub">
-          <i class="fab fa-github"></i>
+  <footer class="site-footer" role="contentinfo" aria-label="Footer">
+    <div class="footer-inline-content">
+      <div class="footer-left">
+        <!-- Download Resume Button in Footer -->
+        <a href="https://drive.google.com/uc?export=download&id=1XnFmIzFmyHInxB_fpHYHiKhg1_iggaPZ" target="_blank" rel="noopener" class="btn-footer-resume">
+          <i class="fas fa-download"></i>
+          <span>Download Resume</span>
         </a>
-        <a href="https://www.linkedin.com/in/ibrahim-mintal" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
+        <img src="profile.png" alt="Ibrahim Ahmed Mintal" class="footer-avatar" />
+        <div class="footer-info-inline">
+          <p class="footer-name-inline">Ibrahim Mintal</p>
+          <p class="footer-role-inline">DevOps Engineer & Solutions Architect</p>
+        </div>
       </div>
-      <nav aria-label="Footer navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#tools">Tools</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div>
-        &copy; 2025 Ibrahim Ahmed Mintal. All Rights Reserved.
+      <div class="footer-right">
+        <p class="footer-copyright">
+          &copy; 2025 Ibrahim Mintal. All Rights Reserved.
+        </p>
       </div>
     </div>
   </footer>
+
+  <button id="scroll-to-hero" class="btn-scroll-hero" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Fixed Download Resume Button -->
+  <a href="https://drive.google.com/uc?export=download&id=1XnFmIzFmyHInxB_fpHYHiKhg1_iggaPZ" target="_blank" rel="noopener" class="btn-fixed-resume">
+  </a>
 
   <!-- Project Images Modal -->
   <div id="project-modal" class="modal-overlay" style="display: none;">
@@ -608,13 +632,24 @@
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+        if (this.getAttribute('href') === '#tools') {
+          e.preventDefault();
+          const toolsDiv = document.getElementById('tools');
+          if (toolsDiv) {
+            toolsDiv.scrollIntoView({
+              behavior: 'smooth',
+              block: 'center'
+            });
+          }
+        } else {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
         }
       });
     });
@@ -643,36 +678,43 @@
       return true;
     }
 
-    // Add loading animation to form submission
+    // Handle form submission to open email client with dynamic subject
     document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
       if (validateForm()) {
-        const button = this.querySelector('button[type="submit"]');
-        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        const form = this;
+        const projectType = form.elements['Project Type'].value;
+        const services = form.elements['Services'].value;
+        const budget = form.elements['Budget'].value;
+        const timeframe = form.elements['Timeframe'].value;
+        const name = form.elements['Name'].value;
+        const email = form.elements['Email'].value;
+        const message = form.elements['Message'].value;
+
+        const subject = `${projectType} - ${name}`;
+        const body = `Project Type: ${projectType}\nServices: ${services}\nBudget: ${budget}\nTimeframe: ${timeframe}\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+        const mailtoUrl = `mailto:ibrahim.mintal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+
+        const button = form.querySelector('button[type="submit"]');
+        button.innerHTML = '<i class="fas fa-envelope"></i> Opening Email Client...';
         button.disabled = true;
+
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          button.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+          button.disabled = false;
+        }, 3000);
       }
     });
 
-    // Add intersection observer for animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+    // Removed intersection observer animations
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Observe all containers for animation
-    document.querySelectorAll('.container, .certifications-section, .languages-section, .tools-section').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
+    // Scroll to top button
+    document.getElementById('scroll-to-top').addEventListener('click', function() {
+      const heroSection = document.getElementById('home');
+      heroSection.scrollIntoView({ behavior: 'smooth' });
     });
   </script>
 </body>
