@@ -85,3 +85,23 @@ if (projectCards.length > 0) {
     if (counterElement) counterElement.textContent = `${index + 1} / ${projectCards.length}`;
   });
 }
+
+// Project modal functionality
+function openProjectModal(imgSrc, title) {
+  document.getElementById('modal-title').textContent = title;
+  const modalImages = document.getElementById('modal-images');
+  modalImages.innerHTML = `<img src="${imgSrc}" alt="${title}">`;
+  document.getElementById('project-modal').style.display = 'flex';
+}
+
+// Close modal on close button click
+document.querySelector('.modal-close').addEventListener('click', () => {
+  document.getElementById('project-modal').style.display = 'none';
+});
+
+// Close modal on overlay click
+document.querySelector('.modal-overlay').addEventListener('click', (e) => {
+  if (e.target === document.querySelector('.modal-overlay')) {
+    document.getElementById('project-modal').style.display = 'none';
+  }
+});
