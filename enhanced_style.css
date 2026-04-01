@@ -842,15 +842,18 @@ body.dark-theme .tool-logo.github-actions { color: #f0f6fc; }
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 
 .certifications-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .certification-badge-link {
