@@ -839,21 +839,20 @@ body.dark-theme .tool-logo.github-actions { color: #f0f6fc; }
   padding: var(--spacing-xl);
   margin-bottom: var(--spacing-xl);
   border: 1px solid var(--border);
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .certifications-list {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: 1.5rem;
   margin-top: var(--spacing-lg);
-  flex-wrap: nowrap;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
+  flex-wrap: wrap;
+  overflow: visible;
 }
 
 .certification-badge-link {
@@ -866,7 +865,8 @@ body.dark-theme .tool-logo.github-actions { color: #f0f6fc; }
 }
 
 .certification-badge {
-  height: 160px;
+  height: auto;
+  max-height: 200px;
   width: auto;
   transition: transform 0.3s ease;
 }
@@ -1563,6 +1563,16 @@ E
 
   .modal-images img {
     max-height: 400px;
+  }
+
+  .certifications-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .certification-badge {
+    max-height: 180px;
   }
 }
 
